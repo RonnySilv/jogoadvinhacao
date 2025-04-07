@@ -1,5 +1,5 @@
 let min = 1;
-let max = 1000;
+let max = 100;
 let tentativa = 0;
 let palpite;
 function getRandomInt(min, max) {
@@ -43,16 +43,9 @@ function userResponse(resposta) {
   document.getElementById("guess-text").textContent = `Tentativa ${tentativa}: O número é ${palpite}?`;
 }
 
-  function restartGame() {
-  min = 1;
-  max = 1000;
-  tentativa = 0;
-  palpite = null;
-
-  document.getElementById("guess-text").textContent = "Pense em um número de 1 a 1000 e clique em \"Começar\".";
+function restartGame() {
+  document.getElementById("guess-text").textContent = "Pense em um número de 1 a 100 e clique em \"Começar\".";
   document.getElementById("start-btn").style.display = "inline-block";
   document.getElementById("response-buttons").style.display = "none";
   document.querySelector(".restart-btn").style.display = "none";
-}
-
 }
