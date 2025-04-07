@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Adivinhação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    button {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .restart-btn {
+      margin-top: 1rem;
+      background-color: #f44336;
+    }
+
+    .restart-btn:hover {
+      background-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jogo da Adivinhação</h1>
+    <p id="guess-text">Pense em um número de 1 a 1000 e clique em "Começar".</p>
+    
+    <div class="buttons" id="response-buttons" style="display: none;">
+      <button onclick="userResponse('menor')">Menor</button>
+      <button onclick="userResponse('acertou')">Acertou</button>
+      <button onclick="userResponse('maior')">Maior</button>
+    </div>
+
+    <button onclick="startGame()" id="start-btn">Começar</button>
+    <button onclick="restartGame()" class="restart-btn" style="display: none;">Recomeçar</button>
+  </div>
+
+  <script src="script.js"></script>
+
+  </script>
+</body>
+</html>
