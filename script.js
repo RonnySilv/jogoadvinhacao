@@ -44,7 +44,7 @@ function userResponse(resposta) {
 }
 
 function restartGame() {
-  document.getElementById("guess-text").textContent = "Pense em um número de 1 a 100 e clique em \"Começar\".";
+  document.getElementById("guess-text").textContent = "Pense em um número de 1 a 1000 e clique em \"Começar\".";
   document.getElementById("start-btn").style.display = "inline-block";
   document.getElementById("response-buttons").style.display = "none";
   document.querySelector(".restart-btn").style.display = "none";
