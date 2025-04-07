@@ -43,9 +43,16 @@ function userResponse(resposta) {
   document.getElementById("guess-text").textContent = `Tentativa ${tentativa}: O número é ${palpite}?`;
 }
 
-function restartGame() {
+  function restartGame() {
+  min = 1;
+  max = 1000;
+  tentativa = 0;
+  palpite = null;
+
   document.getElementById("guess-text").textContent = "Pense em um número de 1 a 1000 e clique em \"Começar\".";
   document.getElementById("start-btn").style.display = "inline-block";
   document.getElementById("response-buttons").style.display = "none";
   document.querySelector(".restart-btn").style.display = "none";
+}
+
 }
